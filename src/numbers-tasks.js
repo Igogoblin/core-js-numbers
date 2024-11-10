@@ -412,7 +412,7 @@ function getNumberValue(number) {
  * 'a' / 1  => false
  * 'a'      => false
  * 5        => true
- * '5'      => false
+ * '5'      => false//return typeof value === 'number' && Number.isFinite(number);
  */
 function isNumber(/* number */) {
   throw new Error('Not implemented');
@@ -476,8 +476,8 @@ function getIntegerOnString(/* str, base */) {
  * 3.5      => false
  * 2 ** 53  => false
  */
-function isSafeInteger(/* number */) {
-  throw new Error('Not implemented');
+function isSafeInteger(number) {
+  return Number.isSafeInteger(number);
 }
 
 /**
