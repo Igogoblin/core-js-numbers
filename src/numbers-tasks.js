@@ -414,8 +414,8 @@ function getNumberValue(number) {
  * 5        => true
  * '5'      => false//return typeof value === 'number' && Number.isFinite(number);
  */
-function isNumber(/* number */) {
-  throw new Error('Not implemented');
+function isNumber(number) {
+  return typeof number === 'number' && Number.isFinite(number);
 }
 
 /**
@@ -613,8 +613,8 @@ function getHypotenuse(a, b) {
  * 10 => 5
  * 15 => 8
  */
-function getCountOfOddNumbers(/* number */) {
-  throw new Error('Not implemented');
+function getCountOfOddNumbers(number) {
+  return Math.floor((Math.abs(number) + 1) / 2);
 }
 
 module.exports = {
